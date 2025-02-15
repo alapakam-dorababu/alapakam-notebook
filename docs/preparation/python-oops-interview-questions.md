@@ -1,13 +1,3 @@
----
-date: 2025-02-13
-categories:
-  - Interview
-tags:
-  - Python
-  - Interview
-authors: [alapakam]
-title: Python Oops Interview Questions
----
 
 # Python OOPs Interview Questions
 

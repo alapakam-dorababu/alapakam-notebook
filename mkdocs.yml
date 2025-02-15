@@ -21,7 +21,7 @@ theme:
     - content.code.copy
     - search.suggest
     - search.highlight
-    # - navigation.tabs
+    - navigation.tabs
     - navigation.path
     - navigation.tabs.sticky
     - navigation.footer
@@ -67,45 +67,68 @@ plugins:
     
 # Extensions
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - admonition
-  - pymdownx.arithmatex:
-      generic: true
-  - footnotes
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.mark
-  - attr_list
-  - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - md_in_html
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  # Python Markdown
+  abbr:
+  attr_list:
+  footnotes:
+  md_in_html:
+  tables:
+  toc:
+    permalink: true
+  
+  # Python Markdown Extensions
+  pymdownx.betterem:
+  pymdownx.caret:
+  pymdownx.highlight:
+    line_spans: __span
+  pymdownx.inlinehilite:
+  pymdownx.keys:
+  pymdownx.mark:
+  pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+  pymdownx.tilde:
+
+  # pymdownx blocks
+  pymdownx.blocks.admonition:
+    types:
+    - note
+    - attention
+    - caution
+    - danger
+    - error
+    - tip
+    - hint
+    - warning
+    # Custom types
+    - info
+    - check
+  pymdownx.blocks.details:
+  pymdownx.blocks.tab:
+    alternate_style: True
+
+  # icons, emoji
+  pymdownx.emoji:
+    emoji_index: !!python/name:material.extensions.emoji.twemoji
+    emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
 
 # Page tree
 nav:
   - Info: index.md
-  - Learn:
-    - Python : 
-      - What is python : python/01-hello-python.md
-    - Django : 
-      - What is django : django/01-hello-django.md
-  - Reference:
-      - Docker: docker/docker-ref.md
-          # - Overview: docker/index.md
-      - Code Snippets:
-          - Overview: code-snippets/index.md
-      - Interview:
-          # - Overview: interview/index.md
-          - Python Interview Questions for Freshers: interview/python-interview-questions-for-freshers.md
-          - Python Interview Questions for Experienced: interview/python-interview-questions-for-experienced.md
-          - Python OOPs Interview Questions: interview/python-oops-interview-questions.md
-
+  - Learn: learn/index.md
+  - Reference: 
+    - Overview: reference/index.md
+    - Code Snippets: code-snippets/index.md
+  - Knowledge:
+    - Overview: knowledge/index.md
+    - Docker Commands: docker/docker-commands.md
+  - Preparation:
+    - Overview: preparation/index.md
+    - Python OOPs Interview Questions: preparation/python-oops-interview-questions.md
+    - Python Interview Questions for Freshers: preparation/python-interview-questions-for-freshers.md
+    - Python Interview Questions for Experienced: preparation/python-interview-questions-for-experienced.md
+  - About: about.md
   
