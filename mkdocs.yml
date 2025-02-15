@@ -1,0 +1,111 @@
+# Project information
+site_name: Alpakam Notebook
+site_url: https://alapakam-dorababu.github.io
+site_author: Alapakam Dorababu
+site_description: >-
+  Alapakam Notebook is my personal space to store coding notes, useful code snippets, and important technical references.  
+
+# Repository
+repo_name: alapakam-dorababu/alapakam-dorababu.github.io
+repo_url: https://github.com/alapakam-dorababu/alapakam-dorababu.github.io
+
+# Copyright
+copyright: |
+  &copy; 2025 <a href="https://github.com/alapakam-dorababu"  target="_blank" rel="noopener">Alapakam Dorababu</a>
+
+# Configuration
+theme:
+  name: material
+  features:
+    - content.tooltips
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    # - navigation.tabs
+    - navigation.path
+    - navigation.tabs.sticky
+    - navigation.footer
+    - toc.follow
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+# Additional configuration
+extra:
+  #To remove "Made with Material for MkDocs" notice from footer
+  # generator: false
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/alapakam-dorababu
+    - icon: fontawesome/brands/twitter
+      link: https://x.com/dorababua67
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+    
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.arithmatex:
+      generic: true
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - md_in_html
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# Page tree
+nav:
+  - Info: index.md
+  - Learn:
+    - Python : 
+      - What is python : python/01-hello-python.md
+    - Django : 
+      - What is django : django/01-hello-django.md
+  - Reference:
+      - Docker: docker/docker-ref.md
+          # - Overview: docker/index.md
+      - Code Snippets:
+          - Overview: code-snippets/index.md
+      - Interview:
+          # - Overview: interview/index.md
+          - Python Interview Questions for Freshers: interview/python-interview-questions-for-freshers.md
+          - Python Interview Questions for Experienced: interview/python-interview-questions-for-experienced.md
+          - Python OOPs Interview Questions: interview/python-oops-interview-questions.md
+
+  
