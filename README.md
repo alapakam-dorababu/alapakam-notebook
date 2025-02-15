@@ -1,4 +1,4 @@
-# Alapakam Notebook  ![status](https://github.com/alapakam-dorababu/coding-growth/actions/workflows/deploy.yml/badge.svg)
+# Alapakam Notebook  ![status](https://github.com/alapakam-dorababu/alapakam-notebook/actions/workflows/deploy.yml/badge.svg)
 
 **Alapakam Notebook** is my personal space to store coding notes, useful code snippets, and important technical references.  
 

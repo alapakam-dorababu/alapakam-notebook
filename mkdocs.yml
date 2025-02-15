@@ -1,13 +1,13 @@
 # Project information
-site_name: Alpakam Notebook
-site_url: https://alapakam-dorababu.github.io
+site_name: Alapakam Notebook
+site_url: https://alapakam-dorababu.github.io/alapakam-notebook
 site_author: Alapakam Dorababu
 site_description: >-
   Alapakam Notebook is my personal space to store coding notes, useful code snippets, and important technical references.  
 
 # Repository
-repo_name: alapakam-dorababu/alapakam-dorababu.github.io
-repo_url: https://github.com/alapakam-dorababu/alapakam-dorababu.github.io
+repo_name: alapakam-dorababu/alapakam-notebook
+repo_url: https://github.com/alapakam-dorababu/alapakam-notebook
 
 # Copyright
 copyright: |
