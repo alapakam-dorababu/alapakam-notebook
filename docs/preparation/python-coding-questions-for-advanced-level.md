@@ -335,3 +335,52 @@ asyncio.run(main())
 }
 ```
 
+---
+
+
+## 11. What is an Iterator?
+
+An **iterator** in Python is an object that implements two methods:
+
+- `__iter__()` – Returns the iterator object itself.
+- `__next__()` – Returns the next value from the sequence. If there are no more items, it raises a `StopIteration` exception.
+
+Iterators allow sequential access to elements without exposing the underlying structure. They are commonly used in loops and other iterable-based operations.
+
+### Why Use Iterators?
+
+- **Memory Efficient:** Iterators generate values one at a time instead of loading an entire sequence into memory.
+- **Lazy Evaluation:** Useful when dealing with large datasets or infinite sequences.
+- **Flexibility:** Can be customized to iterate over different kinds of data.
+
+### Custom Iterator Example
+
+Below is a Python implementation of a simple counter iterator that counts up to a given limit.
+
+```python linenums="1" title="example.py"
+class CounterIterator:
+    def __init__(self, limit):
+        self.current = 0
+        self.limit = limit
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.current >= self.limit:
+            raise StopIteration  # Stop iteration when limit is reached
+        self.current += 1
+        return self.current
+
+# Example usage
+counter = CounterIterator(10)
+
+# using the next
+# print(next(counter))
+# print(next(counter))
+
+for value in counter:
+    print(value)
+```
+
+
