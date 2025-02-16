@@ -46,7 +46,7 @@ There are two main types of scopes in Python:
 
 1. **Local Scope:** A local scope is the innermost scope and is associated with a specific function or method. Variables defined within a function are local to that function and are not accessible outside of it.
       
-    ```python
+    ```python linenums="1" title="example.py"
     def example_function():
         local_variable = 42
         print(local_variable)
@@ -58,7 +58,7 @@ There are two main types of scopes in Python:
 
 2. **Global Scope:** The global scope is associated with the entire module or script. Variables defined at the top level of a module are considered global and can be accessed throughout the module.
      
-    ```python
+    ```python linenums="1" title="example.py"
     global_variable = 10
 
     def another_function():
@@ -88,7 +88,7 @@ In Python, decorators are a powerful and flexible way to modify or extend the be
 
 The syntax for using decorators involves placing the `@decorator_function` symbol above the function definition. Here's a simple example to illustrate the basic concept:
 
-```python
+```python linenums="1" title="example.py"
 def my_decorator(func):
     def wrapper():
         print("Something is happening before the function is called.")
@@ -112,7 +112,7 @@ Decorators are often used for common tasks such as logging, authentication, meas
 Python has some built-in decorators, such as `@staticmethod`, `@classmethod`, and `@property`. Additionally, the `functools` module provides a `wraps` decorator that helps maintain the original function's metadata when creating decorators.   
 Here's an example using the `wraps` decorator from the `functools` module: 
 
-```python
+```python linenums="1" title="example.py"
 from functools import wraps
 
 def my_decorator(func):
@@ -147,7 +147,7 @@ Dict and list comprehensions are concise and expressive ways to create dictionar
 
 A list comprehension is a concise way to create lists in Python. It follows the form:
    
-```python
+```
 [expression for item in iterable if condition]
 
 ```
@@ -158,7 +158,7 @@ A list comprehension is a concise way to create lists in Python. It follows the 
    
 Here's a simple example that generates a list of squares for even numbers between 0 and 9:  
 
-```python
+```python linenums="1" title="example.py"
 squares = [x**2 for x in range(10) if x % 2 == 0]
 # Output: [0, 4, 16, 36, 64]
 
@@ -168,7 +168,7 @@ squares = [x**2 for x in range(10) if x % 2 == 0]
 
 A dict comprehension follows a similar syntax to list comprehensions but generates dictionaries:  
 
-```python
+```
 {key_expression: value_expression for item in iterable if condition}
 
 ```
@@ -178,7 +178,7 @@ A dict comprehension follows a similar syntax to list comprehensions but generat
    
 Here's an example that generates a dictionary mapping even numbers to their squares:   
 
-```python
+```python linenums="1" title="example.py"
 squares_dict = {x: x**2 for x in range(10) if x % 2 == 0}
 # Output: {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
 
@@ -193,7 +193,7 @@ In Python, `lambda` is a keyword that is used to define anonymous functions. An 
 
 The syntax for a lambda function is:  
 
-```python
+```
 lambda arguments: expression
 
 ```
@@ -204,7 +204,7 @@ lambda arguments: expression
    
 Here's a simple example of a lambda function that adds two numbers:   
 
-```python
+```python linenums="1" title="example.py"
 add = lambda x, y: x + y
 result = add(3, 5)
 # Output: 8
@@ -213,7 +213,7 @@ result = add(3, 5)
 
 Lambda functions are commonly used in situations where a small function is needed for a short period and doesn't need a formal name. They are particularly useful in functions like `map()`, `filter()`, and `sorted()` where a short, one-time function is required. Here's an example using `map()`: 
 
-```python
+```python linenums="1" title="example.py"
 numbers = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x**2, numbers))
 # Output: [1, 4, 9, 16, 25]
@@ -231,7 +231,7 @@ In Python, there are several ways to copy objects, and the choice of method depe
 1. Shallow Copy using **`copy` module:**   
     The `copy` module provides the `copy()` function, which can be used to create a shallow copy of an object. A shallow copy creates a new object but doesn't create new objects for the elements within the original object. It means that the inner objects are still references to the same objects as in the original.   
 
-    ```python
+    ```python linenums="1" title="example.py"
     import copy
 
     original_list = [1, 2, [3, 4]]
@@ -242,7 +242,7 @@ In Python, there are several ways to copy objects, and the choice of method depe
 2. Deep Copy using **`copy` module:**   
     The `copy` module also provides the `deepcopy()` function, which creates a deep copy of an object. A deep copy creates a new object and recursively copies all the objects found within the original object. 
 
-    ```python
+    ```python linenums="1" title="example.py"
     import copy
 
     original_list = [1, 2, [3, 4]]
@@ -253,7 +253,7 @@ In Python, there are several ways to copy objects, and the choice of method depe
 3. **Slice (for lists and other sequence types):**   
     For mutable sequence types like lists, you can use slicing to create a shallow copy.   
 
-    ```python
+    ```python linenums="1" title="example.py"
     original_list = [1, 2, 3]
     shallow_copy = original_list[:]
 
@@ -262,7 +262,7 @@ In Python, there are several ways to copy objects, and the choice of method depe
 4. **`copy()` method for certain objects:**   
     Some objects, such as strings, tuples, and frozensets, can be copied using their built-in `copy()` method.  
 
-    ```python
+    ```python linenums="1" title="example.py"
     original_string = "Hello"
     copy_of_string = original_string.copy()
 
@@ -285,7 +285,7 @@ In Python, shallow copy and deep copy are two ways of creating copies of objects
    
     Example using `copy` module:
 
-    ```python
+    ```python linenums="1" title="example.py"
     import copy
 
     original_list = [1, 2, [3, 4]]
@@ -300,7 +300,7 @@ In Python, shallow copy and deep copy are two ways of creating copies of objects
    
     Example using `copy` module: 
     
-    ```python
+    ```python linenums="1" title="example.py"
     import copy
 
     original_list = [1, 2, [3, 4]]
@@ -310,7 +310,7 @@ In Python, shallow copy and deep copy are two ways of creating copies of objects
 
     Here's a comparison to illustrate the difference:
 
-    ```python
+    ```python linenums="1" title="example.py"
     import copy
 
     original_list = [1, 2, [3, 4]]
@@ -345,7 +345,7 @@ In Python 2, there are two functions for generating sequences of numbers: `range
 1. **Return Type:**   
     - `range()` returns a list that includes all the elements within the specified range.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     numbers = range(5)
     # Output in Python 2: [0, 1, 2, 3, 4]
 
@@ -359,7 +359,7 @@ In Python 2, there are two functions for generating sequences of numbers: `range
 1. **Return Type:**   
     - `xrange()` returns an xrange object, which is a generator that produces values on-the-fly as needed.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     numbers = xrange(5)
     # Output in Python 2: xrange(5)
 
@@ -371,7 +371,7 @@ In Python 2, there are two functions for generating sequences of numbers: `range
 
 In Python 3, the behavior of `range()` has been changed to be more memory-efficient, similar to the behavior of `xrange()` in Python 2. In Python 3, `range()` returns a range object, which is a memory-efficient sequence representing a range of numbers.  
 
-```python
+```python linenums="1" title="example.py"
 numbers = range(5)
 # Output in Python 3: range(0, 5)
 
@@ -391,7 +391,7 @@ Pickling and unpickling are processes in Python used for serializing and deseria
 
 Example of pickling to a file:  
 
-```python
+```python linenums="1" title="example.py"
 import pickle
 
 data = {'name': 'John', 'age': 30, 'city': 'New York'}
@@ -404,7 +404,7 @@ with open('data.pkl', 'wb') as file:
 Example of pickling to a string:
 
 
-```python
+```python linenums="1" title="example.py"
 import pickle
 
 data = {'name': 'John', 'age': 30, 'city': 'New York'}
@@ -419,7 +419,7 @@ serialized_data = pickle.dumps(data)
 Example of unpickling from a file:   
 
 
-```python
+```python linenums="1" title="example.py"
 import pickle
 
 with open('data.pkl', 'rb') as file:
@@ -432,7 +432,7 @@ print(loaded_data)
 
 Example of unpickling from a string: 
   
-```python
+```python linenums="1" title="example.py"
 import pickle
 
 serialized_data = b'\x80\x04\x95\x17\x00\x00...'
@@ -455,7 +455,7 @@ The key difference between a regular function and a generator function is the us
 
 Here's an example of a simple generator function:
 
-```python
+```python linenums="1" title="example.py"
 def my_generator():
     yield 1
     yield 2
@@ -484,7 +484,7 @@ Generators are useful for:
    
 Here's an example of an infinite sequence using a generator:   
 
-```python
+```python linenums="1" title="example.py"
 def infinite_sequence():
     num = 0
     while True:
@@ -514,14 +514,14 @@ The `help()` and `dir()` functions in Python are both useful tools for exploring
     - It provides a convenient way to access documentation and details about the usage of various Python elements.   
     - When called without arguments, it enters an interactive help utility. You can type the name of the object you want information about. 
     
-    ```python
+    ```
     help()  # Enters the interactive help utility
 
     ```
 
     - Alternatively, you can pass an object to `help()` to get information about that specific object:  
    
-    ```python
+    ```
     help(list)  # Provides help on the list type
 
     help(print)  # Provides help on the print function
@@ -535,14 +535,14 @@ The `help()` and `dir()` functions in Python are both useful tools for exploring
     - The `dir()` function is used to get a list of names in the current scope or attributes of an object.   
     - When called without arguments, it returns a list of names in the current local scope.   
   
-    ```python
+    ```
     print(dir())
 
     ```
 
     - When called with an object as an argument, it returns a list of valid attributes for that object. 
   
-    ```python
+    ```python linenums="1" title="example.py"
     my_list = [1, 2, 3]
     print(dir(my_list))
 
@@ -554,7 +554,7 @@ The `help()` and `dir()` functions in Python are both useful tools for exploring
    
 Here's an example combining `help()` and `dir()`:   
 
-```python
+```python linenums="1" title="example.py"
 # Using help() and dir() with a list
 my_list = [1, 2, 3]
 
@@ -582,8 +582,7 @@ The `.py` and `.pyc` files in Python represent different stages in the Python de
    
     Example: 
 
-    ```python
-    # sample.py
+    ```python linenums="1" title="example.py"
     print("Hello, World!")
 
     ```
@@ -633,7 +632,7 @@ Here's a simplified explanation:
    
     Example:  
 
-    ```python
+    ```python linenums="1" title="example.py"
     def modify_value(x):
         x = x + 1
         print("Inside function:", x)
@@ -646,7 +645,7 @@ Here's a simplified explanation:
 
     Output:   
 
-    ```python
+    ```
     Inside function: 11
     Outside function: 10
 
@@ -660,7 +659,7 @@ Here's a simplified explanation:
    
     Example:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     def modify_list(my_list):
         my_list.append(4)
         print("Inside function:", my_list)
@@ -672,7 +671,7 @@ Here's a simplified explanation:
     ```
     Output:   
 
-    ```python
+    ```
     Inside function: [1, 2, 3, 4]
     Outside function: [1, 2, 3, 4]
 
@@ -701,7 +700,7 @@ Here's a brief explanation of the iterator protocol:
    
 Here's a simple example of an iterator:
 
-```python
+```python linenums="1" title="example.py"
 class MyIterator:
     def __init__(self, start, end):
         self.current = start
@@ -727,7 +726,7 @@ for element in my_iter:
 ```
 Output:   
 
-```python
+```
 1
 2
 3
@@ -738,7 +737,7 @@ In this example, `MyIterator` is a simple iterator that iterates from the `start
 
 Python also provides built-in functions like `iter()` and `next()` that simplify working with iterators:   
 
-```python
+```python linenums="1" title="example.py"
 # Using iter() and next()
 my_iter = MyIterator(1, 4)
 iterator = iter(my_iter)
@@ -751,7 +750,7 @@ print(next(iterator))  # Output: 3
 
 Many Python objects are iterable and can be used with the `for` loop directly. Examples include lists, tuples, strings, dictionaries, and more. These objects implement the iterator protocol behind the scenes, making them iterable.   
 
-```python
+```python linenums="1" title="example.py"
 my_list = [1, 2, 3]
 
 for element in my_list:
@@ -769,7 +768,7 @@ In Python, you can delete a file using the `os` module, which provides a functio
 
 Here's an example:  
 
-```python
+```python linenums="1" title="example.py"
 import os
 
 file_path = 'example.txt'
@@ -793,7 +792,7 @@ Make sure to replace `'example.txt'` with the actual path of the file you want t
 
 If you want to check whether a file exists before attempting to delete it, you can use the `os.path.exists()` function:   
 
-```python
+```python linenums="1" title="example.py"
 
 import os
 
@@ -824,7 +823,7 @@ The `split()` function is used to split a string into a list of substrings based
 
 Syntax:   
 
-```python
+```
 string.split([separator[, maxsplit]])
 
 ```
@@ -835,7 +834,7 @@ string.split([separator[, maxsplit]])
    
 Example: 
 
-```python
+```python linenums="1" title="example.py"
 sentence = "This is a sample sentence."
 words = sentence.split()  # default separator (space)
 print(words)
@@ -853,7 +852,7 @@ The `join()` function is used to concatenate elements of an iterable (e.g., a li
 
 Syntax:  
 
-```python
+```
 separator.join(iterable)
 
 ```
@@ -862,7 +861,7 @@ separator.join(iterable)
    
 Example:   
 
-```python
+```python linenums="1" title="example.py"
 words = ['This', 'is', 'a', 'sample', 'sentence.']
 sentence = ' '.join(words)
 print(sentence)
@@ -889,7 +888,7 @@ The `*args` syntax in a function definition allows the function to accept any nu
 
 Example:   
 
-```python
+```python linenums="1" title="example.py"
 def example_function(*args):
     for arg in args:
         print(arg)
@@ -909,7 +908,7 @@ The `**kwargs` syntax in a function definition allows the function to accept any
 
 Example:
 
-```python
+```python linenums="1" title="example.py"
 def example_function(**kwargs):
     for key, value in kwargs.items():
         print(f"{key}: {value}")
@@ -928,7 +927,7 @@ You can use both `*args` and `**kwargs` in the same function definition to allow
 
 Example:
 
-```python
+```python linenums="1" title="example.py"
 def example_function(arg1, *args, kwarg1="default", **kwargs):
     print("arg1:", arg1)
     print("args:", args)
@@ -956,7 +955,7 @@ Negative indexes in Python are used to access elements from the end of a sequenc
 
 Here's an example using negative indexing with a list:
 
-```python
+```python linenums="1" title="example.py"
 my_list = [10, 20, 30, 40, 50]
 
 print(my_list[-1])  # Output: 50 (last element)
@@ -966,7 +965,7 @@ print(my_list[-2])  # Output: 40 (second-to-last element)
 
 Similarly, negative indexing can be applied to strings: 
 
-```python
+```python linenums="1" title="example.py"
 my_string = "Hello, World!"
 
 print(my_string[-1])  # Output: '!'

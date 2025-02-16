@@ -9,7 +9,7 @@ Here are some commonly asked Python Object-Oriented Programming (OOP) interview 
 
 In Python, you can create a class using the `class` keyword, followed by the class name. The class body contains attributes (variables) and methods (functions) that define the behavior of the class. Here's a basic example:
 
-```python
+```python linenums="1" title="example.py"
 class MyClass:
     # Class attribute
     class_variable = "I am a class variable"
@@ -47,7 +47,7 @@ To create an instance of the class, you instantiate it by calling the class name
 
 When you run the script, you'll see the output:   
 
-```python
+```
 I am a class variable
 Attribute 1: Value1
 Attribute 2: Value2
@@ -70,7 +70,7 @@ In Python, a class is a blueprint for creating objects, and an object is an inst
    
 Example of a simple class:
 
-```python
+```python linenums="1" title="example.py"
 class Dog:
     def __init__(self, name, age):
         self.name = name
@@ -94,7 +94,7 @@ In this example, the `Dog` class has attributes ( `name` and `age`) and a method
    
 Example of using the `Dog` class to create objects:  
 
-```python
+```python linenums="1" title="example.py"
 # Creating two instances (objects) of the Dog class
 dog1 = Dog(name="Buddy", age=3)
 dog2 = Dog(name="Max", age=2)
@@ -124,7 +124,7 @@ There are several types of inheritance:
 
     - In single inheritance, a subclass inherits from only one base class.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     class Animal:
         def speak(self):
             print("Animal speaks")
@@ -143,7 +143,7 @@ There are several types of inheritance:
 
     - In multiple inheritance, a subclass can inherit from more than one base class.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     class Bird:
         def chirp(self):
             print("Bird chirps")
@@ -167,7 +167,7 @@ There are several types of inheritance:
 
     - In multilevel inheritance, a subclass inherits from another subclass, forming a chain.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     class Animal:
         def speak(self):
             print("Animal speaks")
@@ -191,7 +191,7 @@ There are several types of inheritance:
 
     - In hierarchical inheritance, multiple subclasses inherit from a single base class.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     class Shape:
         def draw(self):
             print("Shape is drawn")
@@ -218,7 +218,7 @@ There are several types of inheritance:
 
     - Hybrid inheritance is a combination of multiple types of inheritance.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     class Animal:
         def speak(self):
             print("Animal speaks")
@@ -257,7 +257,7 @@ In Python, you can access members (attributes and methods) of the parent class i
 
 Here's an example demonstrating how to access parent members in a child class:   
 
-```python
+```python linenums="1" title="example.py"
 class Parent:
     def __init__(self, name):
         self.name = name
@@ -290,7 +290,7 @@ In this example:
    
 When you run this script, the output will be:  
 
-```python
+```
 Parent class - Name: John
 Child class - Additional Info: Likes coding
 
@@ -306,7 +306,7 @@ Yes, it is possible to call a method or attribute of a parent class without crea
 
 Here's an example:   
 
-```python
+```python linenums="1" title="example.py"
 class Parent:
     class_variable = "I am a class variable in the Parent class"
 
@@ -335,7 +335,7 @@ Keep in mind the following:
    
 While calling class methods and accessing class variables without creating instances is possible, it's crucial to understand the context in which this is appropriate. It is often more common and recommended to create instances of classes and call methods on instances to work with instance-specific data.
 
-```python
+```python linenums="1" title="example.py"
 # Creating an instance of the Child class
 child_instance = Child()
 
@@ -357,14 +357,14 @@ In Python, you can create an empty class by using the `pass` statement within th
 
 Here's an example of creating an empty class:   
 
-```python
+```python linenums="1" title="example.py"
 class EmptyClass:
     pass
 
 ```
 In this example, `EmptyClass` is a class with no attributes or methods. It's essentially an empty shell. You might wonder why you would create an empty class. One common use case is when you want to define a class hierarchy and plan to add attributes or methods to the class later. It serves as a starting point for future development.   
 
-```python
+```python linenums="1" title="example.py"
 class Animal:
     pass
 
@@ -399,7 +399,7 @@ In Python, the terms "new" and "override" are often associated with method resol
 
 Example:  
 
-```python
+```python linenums="1" title="example.py"
 class Animal:
     def speak(self):
         print("Animal speaks")
@@ -424,7 +424,7 @@ my_dog.bark()   # Calls the bark method from the Dog class
 
 Example:   
 
-```python
+```python linenums="1" title="example.py"
 class Animal:
     def speak(self):
         print("Animal speaks")
@@ -452,7 +452,7 @@ The `__del__` method is automatically called by the Python interpreter when an o
 
 Example: 
 
-```python
+```python linenums="1" title="example.py"
 class MyClass:
     def __init__(self, name):
         self.name = name
@@ -472,7 +472,7 @@ del obj2
 ```
 Output: 
 
-```python
+```
 Object 1 created
 Object 2 created
 Object 1 destroyed
@@ -496,7 +496,7 @@ Object 2 destroyed
    
 Example using context manager:   
 
-```python
+```python linenums="1" title="example.py"
 class FileHandler:
     def __enter__(self):
         print("Opening file")
@@ -529,7 +529,7 @@ The `__init__` method is part of the object initialization process, and it is co
 
 Here's a simple example of using the `__init__` method:   
 
-```python
+```python linenums="1" title="example.py"
 class MyClass:
     def __init__(self, name, age):
         # Initialize instance variables
@@ -564,7 +564,7 @@ In Python, you can check if a class is a child (subclass) of another class using
 
 The `issubclass()` function checks if a class is a subclass of another class. It takes two arguments: the potential subclass and the potential superclass.  
 
-```python
+```python linenums="1" title="example.py"
 class Parent:
     pass
 
@@ -585,7 +585,7 @@ else:
 
 The `__bases__` attribute of a class provides a tuple of its base classes. You can check if a specific class is present in this tuple to determine if it's a child of another class.   
 
-```python
+```python linenums="1" title="example.py"
 class Parent:
     pass
 

@@ -130,5 +130,9 @@ nav:
     - Python OOPs Interview Questions: preparation/python-oops-interview-questions.md
     - Python Interview Questions for Freshers: preparation/python-interview-questions-for-freshers.md
     - Python Interview Questions for Experienced: preparation/python-interview-questions-for-experienced.md
+    - Coding Question:
+      - Basic Level: preparation/python-coding-questions-for-basic-level.md
+      - intermediate Level: preparation/python-coding-questions-for-intermediate-level.md
+      - Advanced Level: preparation/python-coding-questions-for-advanced-level.md
   - About: about.md
   
