@@ -41,7 +41,7 @@ In dynamically typed languages, variables can change their type during the execu
    
 Python is an example of a dynamically typed language. Here's a simple Python example:   
 
-```python
+```python linenums="1" title="example.py"
 x = 5  # x is an integer
 print(x)
 
@@ -136,7 +136,7 @@ In Python, the term "scope" refers to the region or context in a program where a
     - Variables created inside a function have a local scope and are only accessible within that function.   
     - Once the function execution is complete, the local variables are destroyed, and their scope ends.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     def example_function():
         x = 10  # Local variable
         print(x)
@@ -151,7 +151,7 @@ In Python, the term "scope" refers to the region or context in a program where a
     - Variables defined at this level have a global scope and can be accessed from any part of the program.   
     - Global variables persist throughout the lifetime of the program.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     y = 20  # Global variable
 
     def another_function():
@@ -164,7 +164,7 @@ In Python, the term "scope" refers to the region or context in a program where a
 
     In addition to local and global scopes, Python also has a concept of "enclosing" or "nested" scopes, which occurs when there are nested functions. In this case, a variable can be in the local scope of one function and in the enclosing scope of another:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     def outer_function():
         z = 30  # Enclosing scope variable
 
@@ -203,7 +203,7 @@ In Python, lists and tuples are both data structures used to store ordered colle
 
 5. **Example:**   
    
-    ```python
+    ```python linenums="1" title="example.py"
     my_list = [1, 2, 3, 'hello', [4, 5]]
     my_list.append(6)
     print(my_list)  # Output: [1, 2, 3, 'hello', [4, 5], 6]
@@ -227,7 +227,7 @@ In Python, lists and tuples are both data structures used to store ordered colle
 
 5. **Example:**
 
-    ```python
+    ```python linenums="1" title="example.py"
     my_tuple = (1, 2, 3, 'hello', (4, 5))
     # Attempting to modify a tuple will result in an error:
     # my_tuple[0] = 10  # Raises TypeError: 'tuple' object does not support item assignment
@@ -288,7 +288,7 @@ These built-in data types provide a foundation for working with different kinds 
 In Python, `pass` is a null statement or a no-operation statement. It serves as a placeholder where syntactically some code is required, but no action is desired or necessary. The `pass` statement is a way to have an empty code block that doesn't do anything.   
 Here's an example where `pass` might be used:   
 
-```python
+```python linenums="1" title="example.py"
 def my_function():
     # TODO: Implement this function later
     pass
@@ -299,7 +299,7 @@ In the above example, the `pass` statement is used as a temporary placeholder in
    
 Similarly, `pass` can be used in other situations where a statement is required by Python syntax but no action is needed or intended. For example, in a loop or an if statement:   
 
-```python
+```python linenums="1" title="example.py"
 for i in range(5):
   # TODO: Add loop body later
   pass
@@ -323,7 +323,7 @@ In Python, modules and packages are mechanisms for organizing and structuring co
 A module is a file containing Python code that defines variables, functions, and classes. It allows you to logically organize your Python code into separate files. You can use the functions, variables, and classes defined in a module by importing the module into another Python script.   
 Example of a module (let's call it `my_module.py`):   
 
-```python
+```python linenums="1" title="example.py"
 # my_module.py
 
 def greet(name):
@@ -340,7 +340,7 @@ if __name__ == "__main__":
 You can then use this module in another script:
 
 
-```python
+```python linenums="1" title="example.py"
 # another_script.py
 import my_module
 
@@ -354,7 +354,7 @@ A package is a way of organizing related modules into a single directory hierarc
 
 Example of a package structure:   
 
-```python
+```
 my_package/
 |-- __init__.py
 |-- module1.py
@@ -370,7 +370,7 @@ Here, `my_package` is a package, and `module1.py`, `module2.py`, and `subpackage
 
 Example usage:   
 
-```python
+```python linenums="1" title="example.py"
 # main_script.py
 from my_package import module1, subpackage.module3
 
@@ -394,7 +394,7 @@ In Python, the concepts of global, protected (or "protected internal"), and priv
    
     Example:  
 
-    ```python
+    ```python linenums="1" title="example.py"
     global_variable = 10
 
     def my_function():
@@ -410,7 +410,7 @@ In Python, the concepts of global, protected (or "protected internal"), and priv
    
     Example:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     class MyClass:
         def __init__(self):
             self._protected_variable = 20
@@ -430,7 +430,7 @@ In Python, the concepts of global, protected (or "protected internal"), and priv
    
     Example:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     class MyClass:
         def __init__(self):
             self.__private_variable = 30
@@ -453,7 +453,7 @@ In Python, `self` is a conventionally used name for the first parameter of a met
 
 Here's a simple example to illustrate the use of `self`:   
 
-```python
+```python linenums="1" title="example.py"
 class MyClass:
     def __init__(self, value):
         self.value = value
@@ -487,7 +487,7 @@ Using `self` allows you to differentiate between instance variables (attributes 
 
 Here's a basic example:  
 
-```python
+```python linenums="1" title="example.py"
 class MyClass:
     def __init__(self, value):
         self.value = value
@@ -517,7 +517,7 @@ In Python, `break`, `continue`, and `pass` are control flow statements that affe
    
     Example using `break` with a `while` loop:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     i = 0
     while i < 5:
         print(i)
@@ -529,7 +529,7 @@ In Python, `break`, `continue`, and `pass` are control flow statements that affe
 
     Output:
 
-    ```python
+    ```
     0
     1
     2
@@ -546,7 +546,7 @@ In Python, `break`, `continue`, and `pass` are control flow statements that affe
    
     Example using `continue` with a `for` loop:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     for i in range(5):
         if i == 2:
             continue
@@ -557,7 +557,7 @@ In Python, `break`, `continue`, and `pass` are control flow statements that affe
 
     Output:   
 
-    ```python
+    ```
     0
     1
     3
@@ -574,7 +574,7 @@ In Python, `break`, `continue`, and `pass` are control flow statements that affe
    
     Example using `pass`:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     for i in range(5):
         if i == 2:
             pass
@@ -586,7 +586,7 @@ In Python, `break`, `continue`, and `pass` are control flow statements that affe
 
     Output:   
 
-    ```python
+    ```
     0
     1
     3
@@ -611,7 +611,7 @@ Key concepts related to unit testing in Python:
    
     Example of a simple test case:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     import unittest
 
     class MyTestCase(unittest.TestCase):
@@ -633,7 +633,7 @@ Key concepts related to unit testing in Python:
    
     Example of using `setUp` and `tearDown` methods in a test case:   
 
-    ```python
+    ```python linenums="1" title="example.py"
     import unittest
 
     class MyTestCase(unittest.TestCase):
@@ -667,7 +667,7 @@ Key concepts related to unit testing in Python:
    
     Example:  
 
-    ```python
+    ```python linenums="1" title="example.py"
     import unittest
 
     class MyTestCase(unittest.TestCase):
@@ -689,7 +689,7 @@ Key concepts related to unit testing in Python:
    
     Example of running tests from the command line:   
 
-    ```python
+    ```
     python my_test_module.py
 
     ```
@@ -710,7 +710,7 @@ There are three common styles for writing docstrings in Python:
     - Enclosed within triple double quotes ( `'''` or `"""`).   
     - Typically used for simple functions or methods.
 
-    ```python
+    ```python linenums="1" title="example.py"
     def add(a, b):
         """Return the sum of two numbers."""
         return a + b
@@ -723,7 +723,7 @@ There are three common styles for writing docstrings in Python:
     - Enclosed within triple double quotes.   
     - May include information about parameters, return values, and usage examples.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     def multiply(a, b):
         """
         Multiply two numbers.
@@ -746,7 +746,7 @@ There are three common styles for writing docstrings in Python:
     - Includes sections like Parameters, Returns, Raises, Examples, etc., with a specific format.   
     - Often used in more complex projects or when adhering to specific documentation standards.   
    
-    ```python
+    ```python linenums="1" title="example.py"
     def divide(dividend, divisor):
         """
         Divide two numbers.
@@ -777,7 +777,7 @@ In Python, slicing is a technique that allows you to extract a portion of a sequ
 
 The general syntax for slicing is as follows:  
 
-```python
+```
 sequence[start:stop:step]
 
 ```
@@ -790,7 +790,7 @@ Here are some examples of slicing in Python:
 
 1. **Slicing a List:**   
    
-```python
+```python linenums="1" title="example.py"
 my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 # Extract elements from index 2 to 5 (exclusive)
@@ -810,7 +810,7 @@ print(full_slice)  # Output: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 2. **Slicing a String:**   
    
-```python
+```python linenums="1" title="example.py"
 my_string = "Hello, World!"
 
 # Extract characters from index 7 to 12 (exclusive)
@@ -825,7 +825,7 @@ print(reversed_string)  # Output: !dlroW ,olleH
 
 3. **Slicing a Tuple:**   
 
-```python
+```python linenums="1" title="example.py"
 my_tuple = (10, 20, 30, 40, 50)
 
 # Extract elements from index 1 to 4 (exclusive)
