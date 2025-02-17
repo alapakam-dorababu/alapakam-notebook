@@ -62,7 +62,7 @@ This is a basic example, and you can define more complex classes with additional
 
 In Python, a class is a blueprint for creating objects, and an object is an instance of a class. Classes provide a way to structure and model real-world entities or concepts in a programming environment, and objects are instances of those classes that represent specific instances or entities.
 
-#### Class:
+Class:
 
 - A class is a user-defined data type that defines a blueprint for creating objects.   
 - It encapsulates data (attributes) and functionality (methods) related to a specific concept or entity.   
@@ -86,7 +86,7 @@ my_dog = Dog(name="Buddy", age=3)
 
 In this example, the `Dog` class has attributes ( `name` and `age`) and a method ( `bark`). The `__init__` method is a special method (constructor) that initializes the attributes when an object is created.
 
-#### Object:
+Object:
 
 - An object is an instance of a class. It is a concrete realization of the blueprint defined by the class.   
 - Objects have their own unique identity and can have different values for the attributes defined in their class.   
@@ -389,7 +389,7 @@ While creating an empty class with `pass` can be a valid starting point in some 
 
 In Python, the terms "new" and "override" are often associated with method resolution and method overriding in the context of inheritance. 
 
-#### New Method (Method Resolution Order - MRO):
+New Method (Method Resolution Order - MRO):
 
 - When a subclass provides a method with the same name as a method in its superclass, and this method is not intended to override the superclass method, it is considered a "new method."
 
@@ -414,7 +414,7 @@ my_dog.bark()   # Calls the bark method from the Dog class
 
 ```
    
-#### Override Method:
+Override Method:
 
 - Method overriding occurs when a subclass provides a method with the same name as a method in its superclass, intending to replace or extend the behavior of the superclass method.
 
@@ -446,7 +446,7 @@ In summary, a "new method" is a method introduced in the subclass with a differe
 
 In Python, the `__del__` method, also known as the "finalizer" or "destructor," is used for garbage collection and cleanup. However, it's important to note that relying on `__del__` for cleanup purposes has some limitations and may not be the best practice in all scenarios.
 
-#### \_\_del\_\_ Method:
+\_\_del\_\_ Method:
 
 The `__del__` method is automatically called by the Python interpreter when an object is about to be destroyed, typically when there are no more references to the object. It can be used to perform cleanup actions such as releasing resources (closing files, network connections, etc.) associated with the object.
 
@@ -480,7 +480,7 @@ Object 2 destroyed
 
 ```
 
-#### Limitations and Alternatives:
+Limitations and Alternatives:
 
 1. **Timing of Execution:**
 
@@ -560,7 +560,7 @@ It's important to note that the `self` parameter is a convention in Python and r
 
 In Python, you can check if a class is a child (subclass) of another class using the `issubclass()` function or by checking the relationship directly using the `__bases__` attribute. Both methods provide a way to determine the inheritance relationship between two classes. 
 
-#### Using issubclass() Function:
+Using issubclass() Function:
 
 The `issubclass()` function checks if a class is a subclass of another class. It takes two arguments: the potential subclass and the potential superclass.  
 
@@ -581,7 +581,7 @@ else:
 
 ```
 
-#### Using __bases__ Attribute:
+Using __bases__ Attribute:
 
 The `__bases__` attribute of a class provides a tuple of its base classes. You can check if a specific class is present in this tuple to determine if it's a child of another class.   
 

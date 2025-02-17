@@ -127,6 +127,7 @@ nav:
     - Docker Commands: docker/docker-commands.md
   - Preparation:
     - Overview: preparation/index.md
+    - Algorithms: preparation/algorithms.md
     - Python OOPs Interview Questions: preparation/python-oops-interview-questions.md
     - Python Interview Questions for Freshers: preparation/python-interview-questions-for-freshers.md
     - Python Interview Questions for Experienced: preparation/python-interview-questions-for-experienced.md

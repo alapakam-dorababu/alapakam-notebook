@@ -4,7 +4,7 @@ Below are the Python solutions for the given advanced-level problems, along with
 
 ---
 
-## 1. Implement a Linked List in Python
+### 1. Implement a Linked List in Python
 
 A linked list is a linear data structure in which elements (nodes) are stored in a chain-like manner, with each node containing data and a reference to the next node.
 
@@ -49,7 +49,7 @@ ll.print_list()
 
 ---
 
-## 2. Detect a Cycle in a Linked List
+### 2. Detect a Cycle in a Linked List
 
 A cycle in a linked list occurs when a node’s `next` pointer points back to a previous node, forming a loop. Floyd’s cycle-finding algorithm (Tortoise and Hare algorithm) is used to detect cycles.
 
@@ -76,7 +76,7 @@ print(has_cycle(node1))  # Output: True
 
 ---
 
-## 3. Implement a Binary Search Tree (BST)
+### 3. Implement a Binary Search Tree (BST)
 
 A Binary Search Tree (BST) is a tree data structure where each node has at most two children, with left children containing smaller values and right children containing larger values.
 
@@ -122,7 +122,7 @@ root.inorder()
 
 ---
 
-## 4. Find the Lowest Common Ancestor in a BST
+### 4. Find the Lowest Common Ancestor in a BST
 
 The Lowest Common Ancestor (LCA) of two nodes in a BST is the deepest node that has both nodes as descendants.
 
@@ -147,7 +147,7 @@ print(ancestor.data)
 
 ---
 
-## 5. Implement Matrix Multiplication
+### 5. Implement Matrix Multiplication
 
 Matrix multiplication is a mathematical operation that produces a new matrix by multiplying two matrices.
 
@@ -168,7 +168,7 @@ print(matrix_multiply(A, B))
 
 ---
 
-## 6. Implement an LRU Cache
+### 6. Implement an LRU Cache
 
 An LRU (Least Recently Used) Cache is a data structure that removes the least recently accessed items when full.
 
@@ -204,7 +204,7 @@ print(cache.get(2)) # Output: -1 (Evicted)
 
 ---
 
-## 7. Write a Python Function to Flatten a Nested List
+### 7. Write a Python Function to Flatten a Nested List
 
 A nested list is a list containing other lists as elements. Flattening a nested list involves converting it into a single-level list.
 
@@ -229,7 +229,7 @@ print(flatten_list(nested))
 
 ---
 
-## 8. Implement a Decorator in Python
+### 8. Implement a Decorator in Python
 
 A decorator is a function that modifies another function without changing its structure.
 
@@ -257,7 +257,7 @@ After function execution
 
 ---
 
-## 9. Implement a Producer-Consumer Pattern Using Threading
+### 9. Implement a Producer-Consumer Pattern Using Threading
 
 The Producer-Consumer pattern is a common concurrency pattern where a producer thread generates data and a consumer thread processes it.
 
@@ -304,7 +304,7 @@ Consuming 4
 
 ---
 
-## 10. Implement an Async Function to Fetch Data from an API
+### 10. Implement an Async Function to Fetch Data from an API
 
 Asynchronous programming allows non-blocking execution of tasks. The `asyncio` and `aiohttp` libraries help perform asynchronous HTTP requests.
 
@@ -338,7 +338,7 @@ asyncio.run(main())
 ---
 
 
-## 11. What is an Iterator?
+### 11. What is an Iterator?
 
 An **iterator** in Python is an object that implements two methods:
 
@@ -383,4 +383,40 @@ for value in counter:
     print(value)
 ```
 
+---
 
+### 12. Write a Python program to find the maximum sum of a contiguous subarray within a given list of integers.
+
+Find the largest sum of any continuous subarray in a given list of integers.
+
+```python linenums="1" title="example.py"
+def max_subarray(arr):
+    max_sum = 0  # Store the highest sum found
+    current_sum = 0  # Running sum of the current subarray
+    start_index = 0  # Start index of the maximum subarray
+    end_index = 0  # End index of the maximum subarray
+    temp_start = 0  # Temporary start index for tracking
+    
+    for i in range(len(arr)):
+        current_sum += arr[i]  # Add current element to running sum
+        
+        # If the current sum is the highest so far, update max_sum and indices
+        if current_sum > max_sum:
+            max_sum = current_sum
+            start_index = temp_start
+            end_index = i
+        
+        # If current sum becomes negative, reset it and move temp_start forward
+        if current_sum < 0:
+            current_sum = 0
+            temp_start = i + 1
+    
+    # Return the highest sum found and the corresponding subarray
+    return max_sum, arr[start_index:end_index+1]
+
+# Example usage:
+numbers = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+max_sum, subarray = max_subarray(numbers)
+print("Maximum Subarray Sum:", max_sum)
+print("Subarray:", subarray)
+```
