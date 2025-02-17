@@ -347,13 +347,13 @@ An **iterator** in Python is an object that implements two methods:
 
 Iterators allow sequential access to elements without exposing the underlying structure. They are commonly used in loops and other iterable-based operations.
 
-### Why Use Iterators?
+Why Use Iterators?
 
 - **Memory Efficient:** Iterators generate values one at a time instead of loading an entire sequence into memory.
 - **Lazy Evaluation:** Useful when dealing with large datasets or infinite sequences.
 - **Flexibility:** Can be customized to iterate over different kinds of data.
 
-### Custom Iterator Example
+Custom Iterator Example:
 
 Below is a Python implementation of a simple counter iterator that counts up to a given limit.
 

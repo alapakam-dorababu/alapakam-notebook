@@ -21,6 +21,21 @@ print(are_anagrams("listen", "silent"))  # Output: True
 
 This function finds all pairs of numbers in a list that add up to a given target sum.
 
+Example 1:
+
+```python linenums="1" title="example.py"
+input_list = [1, 2, 3, 4, 5, 6]
+pairs_list = []
+
+for i in input_list:
+    for j in input_list:
+        if i + j == 7 and (j, i) not in pairs_list:
+            pairs_list.append((i, j))
+
+print(pairs_list) # Output: [(3, 4), (2, 5), (1, 6)]
+```
+Example 2:
+
 ```python linenums="1" title="example.py"
 def find_pairs(lst, target):
     pairs = []
