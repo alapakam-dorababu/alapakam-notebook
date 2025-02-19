@@ -1,3 +1,6 @@
+
+<meta name="google-site-verification" content="XsBNGIP27Dj_O-fYoZwPT1Mucc9ccn3GBJ9nb5__yhg" />
+
 # Alapakam Notebook  
 
 **Alapakam Notebook** is my personal space to store coding notes, useful code snippets, and important technical references.  
