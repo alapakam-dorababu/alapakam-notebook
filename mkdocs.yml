@@ -16,6 +16,7 @@ copyright: |
 # Configuration
 theme:
   name: material
+  custom_dir: overrides
   features:
     - content.tooltips
     - content.code.copy
