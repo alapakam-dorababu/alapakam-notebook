@@ -123,6 +123,7 @@ nav:
     - Deploying Flask with Celery, Redis, and Nginx via Docker: flask/flask-celery-docker.md
     - Running Flask and Celery in a Single File: flask/flask-celery-single-file.md
     - Python Logging Configuration: python/python-logging-configuration.md
+    - Push-to-EC2 Deployment Workflow: github/push-to-ec2-deployment-workflow.md
   - Reference: 
     - Overview: reference/index.md
     - Code Snippets: code-snippets/index.md
