@@ -9,7 +9,7 @@ Create a new file, e.g., deploy.yml inside the .github/workflows/ directory.
 The filename can be anything descriptive of the workflow.
 
 ```yaml title="deploy.yml"
-name: Push-to-EC2
+name: Push to EC2 on Master Branch Push
 
 on:
   push:
@@ -18,29 +18,28 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to EC2 on master branch push
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout the files
         uses: actions/checkout@v4
 
-      - name: Deploy to Server 1
+      - name: Move the master branch code to the target directory on the SSH server
         uses: easingthemes/ssh-deploy@main
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          TARGET: ${{ secrets.SSH_TARGET_DIR }}
 
-      - name: Execute remote Docker commands
+      - name: Execute commands on the SSH server
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ${{ secrets.TARGET_DIR }}
+            cd ${{ secrets.SSH_TARGET_DIR }}
             docker compose down
             docker compose build
             docker compose up -d
@@ -50,7 +49,7 @@ jobs:
 
 ### 1. Trigger the Workflow
 ```yaml
-name: Push-to-EC2
+name: Push to EC2 on Master Branch Push
 
 on:
   push:
@@ -75,27 +74,27 @@ on:
 
 #### **Step 2: Deploy the Code to EC2**
 ```yaml
-- name: Deploy to Server 1
+- name: Move the master branch code to the target directory on the SSH server
   uses: easingthemes/ssh-deploy@main
   env:
-    SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-    REMOTE_HOST: ${{ secrets.HOST_DNS }}
-    REMOTE_USER: ${{ secrets.USERNAME }}
-    TARGET: ${{ secrets.TARGET_DIR }}
+    REMOTE_HOST: ${{ secrets.SSH_HOST }}
+    REMOTE_USER: ${{ secrets.SSH_USER }}
+    SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+    TARGET: ${{ secrets.SSH_TARGET_DIR }}
 ```
 - Uses `ssh-deploy` action to **copy the repository files** to the EC2 instance.
 - Uses **GitHub Secrets** to securely store SSH credentials and deployment target details.
 
 #### **Step 3: Restart the Docker Containers on EC2**
 ```yaml
-- name: Execute remote Docker commands
+- name: Execute commands on the SSH server
   uses: appleboy/ssh-action@master
   with:
-    host: ${{ secrets.HOST_DNS }}
-    username: ${{ secrets.USERNAME }}
-    key: ${{ secrets.EC2_SSH_KEY }}
+    host: ${{ secrets.SSH_HOST }}
+    username: ${{ secrets.SSH_USER }}
+    key: ${{ secrets.SSH_PRIVATE_KEY }}
     script: |
-      cd ${{ secrets.TARGET_DIR }}
+      cd ${{ secrets.SSH_TARGET_DIR }}
       docker compose down
       docker compose build
       docker compose up -d
