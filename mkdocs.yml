@@ -137,5 +137,6 @@ nav:
       - Basic Level: preparation/python-coding-questions-for-basic-level.md
       - intermediate Level: preparation/python-coding-questions-for-intermediate-level.md
       - Advanced Level: preparation/python-coding-questions-for-advanced-level.md
+  - Playground: playground/index.md
   - About: about.md
   
