@@ -1,0 +1,60 @@
+    /* Modern button hover effects */
+    .py-run-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        opacity: 0.9;
+    }
+
+    .py-clear-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: var(--md-default-fg-color--lightest) !important;
+    }
+
+    /* Button focus effects */
+    button:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+    }
+
+    /* Modern output area */
+    .py-output {
+        border-radius: 8px !important;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    /* Button container */
+    .py-controls-container {
+        background: var(--md-code-bg-color);
+        padding: 12px;
+        border-radius: 8px;
+        margin: 16px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Button alignment fixes */
+    .py-controls-container button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-height: 36px;
+        padding: 6px 12px;
+        line-height: 1.2;
+        vertical-align: middle;
+    }
+
+    .py-controls-container button svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+    }
+
+    /* Button group spacing */
+    .py-controls-container>div {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
