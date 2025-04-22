@@ -118,17 +118,13 @@ markdown_extensions:
 # Page tree
 nav:
   - Info: index.md
-  - Learn: 
-    - Overview: learn/index.md
+  - Reference: 
+    - Overview: reference/index.md
+    - Code Snippets: code-snippets/index.md
     - Deploying Flask with Celery, Redis, and Nginx via Docker: flask/flask-celery-docker.md
     - Running Flask and Celery in a Single File: flask/flask-celery-single-file.md
     - Python Logging Configuration: python/python-logging-configuration.md
     - Push-to-EC2 Deployment Workflow: github/push-to-ec2-deployment-workflow.md
-  - Reference: 
-    - Overview: reference/index.md
-    - Code Snippets: code-snippets/index.md
-  - Knowledge:
-    - Overview: knowledge/index.md
     - Docker Commands: docker/docker-commands.md
     - Django dummy database setup: django/django-dummy-db-setup.md
   - Preparation:
@@ -141,5 +137,6 @@ nav:
       - Basic Level: preparation/python-coding-questions-for-basic-level.md
       - intermediate Level: preparation/python-coding-questions-for-intermediate-level.md
       - Advanced Level: preparation/python-coding-questions-for-advanced-level.md
+  - Playground: playground/index.md
   - About: about.md
   
