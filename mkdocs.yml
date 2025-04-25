@@ -120,13 +120,31 @@ nav:
   - Info: index.md
   - Reference: 
     - Overview: reference/index.md
+    - Python: 
+      - Celery Integration: python/python-celery.md
+      - S3 File Uploader: python/s3-uploader-explanation.md
+      - Custom Exception: python/python-custom-exception.md
+      - Connecting to FTP Server: python/ftp-script-explanation.md
+      - Logging Configuration: python/python-logging-configuration.md
+      - Download Google Drive Folder: python/download-google-drive-files.md
+      - Dump DB Records into Elasticsearch Index: python/dump-db-records-into-elasticsearch.md
+    - Django:
+      - Django dummy database setup: django/django-dummy-db-setup.md
+      -  Django-RQ Simple Example: django/django-rq-simple-example.md
+      - Django Project Logging Configuration: django/djagno-logging-configuration.md
+      - Use Next.js Auth Token to Authorize Access to DRF View:  django/django-permissions-with-next-js-token.md
+      - Django + Docker + Celery + Celery Beat + Flower Setup (for existing Django project): django/django-docker-celery-beat-flower.md
+    - Flask:
+      - Running Flask and Celery in a Single File: flask/flask-celery-single-file.md
+      - Deploying Flask with Celery, Redis, and Nginx via Docker: flask/flask-celery-docker.md
+    - Docker:
+      - Docker Commands: docker/docker-commands.md
+      - Docker GPU Setup – Run GPU-Accelerated Apps: docker/docker-gpu-setup.md
+    - Other:
+      - Nginx Configuration: reference/nginx-configuration.md
+      - AWS Lambda Deployment: reference/aws-lambda-deployment.md
+      - Push-to-EC2 Deployment Workflow: github/push-to-ec2-deployment-workflow.md
     - Code Snippets: code-snippets/index.md
-    - Deploying Flask with Celery, Redis, and Nginx via Docker: flask/flask-celery-docker.md
-    - Running Flask and Celery in a Single File: flask/flask-celery-single-file.md
-    - Python Logging Configuration: python/python-logging-configuration.md
-    - Push-to-EC2 Deployment Workflow: github/push-to-ec2-deployment-workflow.md
-    - Docker Commands: docker/docker-commands.md
-    - Django dummy database setup: django/django-dummy-db-setup.md
   - Preparation:
     - Overview: preparation/index.md
     - Algorithms: preparation/algorithms.md
